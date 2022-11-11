@@ -1,0 +1,17 @@
+<p style="color: green"><%= notice %></p>
+
+<div id="events" class="container-fluid d-flex flex-wrap justify-content-center row xy-3">
+    <% @events.each do |event| %>
+
+        <div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <%= render event %>
+          <p>
+          <div class="d-flex align-items-center justify-content-center">
+            <%= link_to "Plus d'info", event, class: "btn btn-sm btn-primary btn-block "%>        
+        </div>
+        </p>
+        </div>
+        </div>
+    <%end%>
+</div>
